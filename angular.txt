@@ -1,0 +1,101 @@
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="..\assets\images\banner.png"  width="1024" height="300" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="src\assets\images\banner2.png" width="1024" height="300" class="d-block w-100" alt="...">
+        </div>
+
+        <div class="carousel-item">
+            <img src="src\assets\images\banner.png" width="1024" height="300" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only"></span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only"></span>
+    </a>
+</div>
+
+Box1 = [
+  //   {
+  //     title: 'git ass devops tool',
+  //     text1: 'Learnlytica',
+  //     text2: '₹1599 ₹1499',     
+  //     imagelink: 'https://dz8fbjd9gwp2s.cloudfront.net/courses/61aa18860cf26833c8eca46c/61aa18860cf26833c8eca46c_scaled_cover.jpg?v=1'
+  //   },
+  //   {
+  //     title: 'devops automation',
+  //     text1: 'Learnlytica',
+  //     text2: '₹1599 ₹1499',
+  //     imagelink: 'https://dz8fbjd9gwp2s.cloudfront.net/courses/61aa193f0cf272b4d2eef49a/61aa193f0cf272b4d2eef49a_scaled_cover.jpg?v=1'
+
+  //   },
+  //   {
+  //     title: 'chef as a devops tool',
+  //     text1: 'Learnlytica',
+  //     text2: '₹1599 ₹1499',
+  //     imagelink: 'https://dz8fbjd9gwp2s.cloudfront.net/courses/61aaffed0cf2a71c5139fc7c/61aaffed0cf2a71c5139fc7c_scaled_cover.jpg?v=1'
+  //   },
+  //   {
+  //     title: 'using jenkins for devops',
+  //     text1: 'Learnlytica',
+  //     text2: '₹1599 ₹1499',      
+  //     imagelink: 'https://dz8fbjd9gwp2s.cloudfront.net/courses/61ab04c30cf272041d78452f/61ab04c30cf272041d78452f_scaled_cover.jpg?v=1'
+  //   }
+  // ];
+
+!-- <div class="container">
+        <div class="row">
+            <div *ngFor="let element of Box1" class="col-3 ">
+                <div class="card" style="width: 16rem;">
+                    <img class="card-img-top" src="{{element.imagelink}}" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-title"href="#">{{element.title | uppercase}}</p>
+                      <p class="card-text">{{element.text1}}</p>
+                      <p class="card-text">{{element.text2}}</p>
+                      <a href="#" class="btn btn-primary">Buy This Course</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div> -->
+
+<div class="container">
+  <div class="toolbar" role="banner">
+    <img width="75" alt="Angular Logo"
+      src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png" />
+    <input class="search" type="text" placeholder="Search for products,brands and more">
+    <a class="login">Login</a>
+    <!-- <li class="nav-item"> -->
+    <!-- <a class="nav-link" href="#">
+        <select class="">More>
+        </select>
+        </li>
+      </a> -->
+    <!-- <img src="https://icon-library.com/images/shopping-cart-icon-png/shopping-cart-icon-png-3.jpg" width="100" height="70">
+      <span class="last">Cart</span>
+     -->
+  </div>
+</div>
+
+
+
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './components/login/login.component';
+const routes: Routes = [
+    {path:'login',component:LoginComponent},
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+  
+

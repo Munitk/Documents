@@ -1,0 +1,12 @@
+ npm install -g @angular/cli
+C:/Users/munit_yadav/AppData/Roaming/npm/ng s
+g c ./components/header
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+-------------------------------------------------------------
+node.js
+C:/Users/munit_yadav/AppData/Roaming/npm/express --no-view api-support
+
+react js
+C:/Users/munit_yadav/AppData/Roaming/npm/create-react-app react-final
+npm install react-router-dom axios
+ npm install bootstrap

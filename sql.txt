@@ -1,0 +1,72 @@
+config.js
+
+var mysql      = require('mysql');
+let learn = function(){
+    var connection = mysql.createConnection({
+        host     : 'localhost',
+        user     : 'root',
+        password : 'root',
+        database : 'thbs',
+        insecureAuth : true
+      });
+      return connection;
+};
+module.exports.localConnect=learn;
+
+ db.js
+
+var mysql = require('mysql');
+let learn = function () {
+    var connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        password: 'root',
+        database: 'thbs',
+        insecureAuth: true
+    });
+    return connection;
+};
+module.exports.localConnect = learn;
+
+sqldata.sql
+
+create database thbs;
+use thbs;
+CREATE TABLE IF NOT EXISTS `user_profile` (
+
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+
+ `username` varchar(50) NOT NULL,
+
+ `email` varchar(50) NOT NULL,
+
+ `password` varchar(50) NOT NULL,
+
+  `first_name` varchar(100) NOT NULL,
+
+  `last_name` varchar(100) NOT NULL,
+
+  `job_title` varchar(100) DEFAULT NULL,
+
+  `salary` double DEFAULT NULL,
+
+ `create_datetime` varchar(200) NOT NULL,
+
+ PRIMARY KEY (`id`)
+
+);
+
+user.js
+
+var express = require('express');
+var router = express.Router();
+let dbConnection = require('./../db/db').localConnect();
+/* GET users listing. */
+router.get('/', function(req, res, next) {
+dbConnection.query('select * from user_profile',(error,resluts,fields) =>{
+  if (error) throw error;
+  res.send(resluts);
+})
+});
+
+module.exports = router;
